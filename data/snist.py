@@ -4,12 +4,24 @@ import torch.utils.data as data
 from PIL import Image
 import os
 import os.path
+import errno
 import gzip
 import numpy as np
 import torch
 import codecs
-from torchvision.datasets.utils import download_url, makedir_exist_ok
+from torchvision.datasets.utils import download_url
 
+def makedir_exist_ok(dirpath):
+    """
+    Python2 support for os.makedirs(.., exist_ok=True)
+    """
+    try:
+        os.makedirs(dirpath)
+    except OSError as e:
+        if e.errno == errno.EEXIST:
+            pass
+        else:
+            raise
 
 class SNIST(data.Dataset):
     """`SNIST <https://github.com/LukasMosser/SNIST>`_ Dataset.
@@ -28,15 +40,13 @@ class SNIST(data.Dataset):
             target and transforms it.
     """
     urls = [
-        'https://github.com/LukasMosser/SNIST/data/train/train_amplitudes.npy',
-        'https://github.com/LukasMosser/SNIST/data/train/train_velocities.npy',
-        'https://github.com/LukasMosser/SNIST/data/test/test_amplitudes.npy',
-        'https://github.com/LukasMosser/SNIST/data/test/test_velocities.npy',
+        'https://raw.githubusercontent.com/LukasMosser/SNIST/master/data/train/train_amplitudes.npy',
+        'https://raw.githubusercontent.com/LukasMosser/SNIST/master/data/train/train_velocities.npy',
+        'https://raw.githubusercontent.com/LukasMosser/SNIST/master/data/test/test_amplitudes.npy',
+        'https://raw.githubusercontent.com/LukasMosser/SNIST/master/data/test/test_velocities.npy',
     ]
     training_file = 'training.pt'
     test_file = 'test.pt'
-    classes = ['0 - zero', '1 - one', '2 - two', '3 - three', '4 - four',
-               '5 - five', '6 - six', '7 - seven', '8 - eight', '9 - nine']
 
     @property
     def train_labels(self):
@@ -133,12 +143,12 @@ class SNIST(data.Dataset):
         print('Processing...')
 
         training_set = (
-            read_image_file(os.path.join(self.raw_folder, 'train_amplitudes.npy')),
-            read_label_file(os.path.join(self.raw_folder, 'train_velocities.npy'))
+            read_amplitude_file(os.path.join(self.raw_folder, 'train_amplitudes.npy')),
+            read_velocity_file(os.path.join(self.raw_folder, 'train_velocities.npy'))
         )
         test_set = (
-            read_image_file(os.path.join(self.raw_folder, 'test_amplitudes.npy')),
-            read_label_file(os.path.join(self.raw_folder, 'test_velocities.npy'))
+            read_amplitude_file(os.path.join(self.raw_folder, 'test_amplitudes.npy')),
+            read_velocity_file(os.path.join(self.raw_folder, 'test_velocities.npy'))
         )
         with open(os.path.join(self.processed_folder, self.training_file), 'wb') as f:
             torch.save(training_set, f)
@@ -158,3 +168,16 @@ class SNIST(data.Dataset):
         tmp = '    Target Transforms (if any): '
         fmt_str += '{0}{1}'.format(tmp, self.target_transform.__repr__().replace('\n', '\n' + ' ' * len(tmp)))
         return fmt_str
+
+
+def get_int(b):
+    return int(codecs.encode(b, 'hex'), 16)
+
+def read_velocity_file(path):
+    data = np.load(path)
+    return torch.from_numpy(data).float()
+
+
+def read_amplitude_file(path):
+    data = np.load(path)
+    return torch.from_numpy(data).view(data.shape[0], 1, data.shape[1], data.shape[2]).float()
