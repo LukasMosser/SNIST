@@ -1,3 +1,2 @@
 # Seismic-NIST
-[![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-blue.svg)](https://creativecommons.org/licenses/by-sa/4.0/) 
-[![CircleCI](https://circleci.com/gh/LukasMosser/SNIST.svg?style=svg)](https://circleci.com/gh/LukasMosser/SNIST)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
