@@ -1,0 +1,35 @@
+version: '2'
+
+services:
+
+  generate-train:
+
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+
+    environment:
+      DEVITO_ARCH: gcc
+      DEVITO_OPENMP: 1
+
+    volumes:
+      - ./devito:/app/devito
+      - ./examples:/app/examples
+      - ../../../data:/app/data
+    command: python /app/examples/seismic/acoustic/acoustic_wave.py --input /app/data/train/train_velocities.npy --output /app/data/train/train_amplitudes.npy
+
+  generate-test:
+
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+
+    environment:
+      DEVITO_ARCH: gcc
+      DEVITO_OPENMP: 1
+
+    volumes:
+      - ./devito:/app/devito
+      - ./examples:/app/examples
+      - ../../../data:/app/data
+    command: python /app/examples/seismic/acoustic/acoustic_wave.py --input /app/data/test/test_velocities.npy --output /app/data/test/test_amplitudes.npy
