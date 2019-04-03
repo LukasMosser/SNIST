@@ -1,7 +1,7 @@
 # Seismic-NIST
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-
+ ![](benchmarks/figures/training_amplitudes.png)
 ### Seismic-NIST - SNIST
 | File            | Examples | Download (NumPy format)      |
 |-----------|--------------|------------------------------|
