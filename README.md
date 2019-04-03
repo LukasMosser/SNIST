@@ -1,7 +1,6 @@
 # Seismic-NIST
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
- ![](benchmarks/figures/training_amplitudes.png)
 ### Seismic-NIST - SNIST
 | File            | Examples | Download (NumPy format)      |
 |-----------|--------------|------------------------------|
@@ -15,7 +14,7 @@
 ### Benchmarks and Results
 |Model                            | SNIST-0 | SNIST-1 | SNIST-2 | Credit
 |---------------------------------|---------|---------|---------|-------
-|[1-Hidden Layer Benchmark](benchmarks/SNIST-Benchmark-Roeth-and-Tarantola.ipynb)     | 242.42 [m\s] | 287.98 [m\s] | 428.59% [m\s] | [@porestar](twitter.com/porestar)
+|[1-Hidden Layer Benchmark](benchmarks/SNIST-Benchmark-Roeth-and-Tarantola.ipynb)     | 242.42 [m\s] | 287.98 [m\s] | 428.59 [m\s] | [@porestar](twitter.com/porestar)
 
 ### Generating the data
 The data can be reproduced by running ```make build``` in the ```data_generation```
