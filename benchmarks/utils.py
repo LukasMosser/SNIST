@@ -17,7 +17,7 @@ def plot_amplitudes_grid(amplitudes, nt, nrec):
         ax.imshow(x.reshape(nt, nrec), aspect='auto', vmin=vmin, vmax=vmax)
         ax.get_xaxis().set_ticks([])
         ax.get_yaxis().set_ticks([])
-    return axarr
+    return axarr, fig
 
 def plot_velocity_profiles_grid(y, y_, nz):
     fig, axarr = plt.subplots(5, 5, figsize=(12, 12))
@@ -27,7 +27,7 @@ def plot_velocity_profiles_grid(y, y_, nz):
         ax.set_ylim(0.0, 1.0)
         ax.get_xaxis().set_ticks([])
         ax.get_yaxis().set_ticks([])
-    return axarr
+    return axarr, fig
 
 def plot_velocity_profile_grid(y, nz):
     fig, axarr = plt.subplots(5, 5, figsize=(12, 12))
@@ -85,7 +85,7 @@ def plot_wiggle_traces(fig, xample, n_recorders):
         else:
             ax.axes.get_yaxis().set_visible(False)
             ax.set_frame_on(False)
-            ax.set_xlabel("Time [10 ms]", fontsize=20)
+            ax.set_xlabel("Time [10 ms]", fontsize=16)
 
 def set_seed(seed):
     random.seed(seed)
