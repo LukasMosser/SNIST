@@ -206,5 +206,5 @@ def read_velocity_file(path):
 
 
 def read_amplitude_file(path):
-    data = np.load(path)[:, :, 1:]
+    data = np.load(path)
     return torch.from_numpy(data).view(data.shape[0], 1, data.shape[1], data.shape[2]).float()
