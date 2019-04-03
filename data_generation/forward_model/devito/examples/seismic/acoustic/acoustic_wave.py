@@ -115,4 +115,4 @@ if __name__ == "__main__":
         amps.append(rec.resample(num=num_samples).data)
         if i % 10 == 9:
             print("Generated Model ", str(i))
-    np.save(os.path.expandvars(args.output), np.array(amps))
+    np.save(os.path.expandvars(args.output), np.array(amps)[:, :, 1:])
