@@ -1,5 +1,5 @@
 # Seismic-NIST
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LukasMosser/SNIST/benchmarks/SNIST-Benchmark-Roeth-and-Tarantola.ipynb)
 
 ### Seismic-NIST - SNIST
 | File            | Examples | Download (NumPy format)      |
