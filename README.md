@@ -2,6 +2,16 @@
 [![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/LukasMosser/SNIST.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/LukasMosser/SNIST/context:python) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LukasMosser/SNIST/benchmarks/SNIST_Benchmark_Roeth_and_Tarantola.ipynb)
 
 # Seismic-NIST
+<details><summary>Table of Contents</summary><p>
+
+* [What the data looks like](#what-the-data-looks-like)
+* [Why Seismic-NIST was created](#why-seismic-nist-was-created)
+* [Get the Data](#get-the-data)
+* [Benchmarks and Results](#benchmarks-and-results)
+* [Generating the data](#generating-the-data)
+* [Contributing](#contributing)
+* [License](#license)
+</p></details><p></p>
 
 ```Seismic-NIST``` is a dataset of acoustic [seismic](https://wiki.seg.org/wiki/Seismic_Data_Analysis) waveforms and their underlying [velocity profiles](https://wiki.seg.org/wiki/Inversion_of_seismic_data). The dataset is inspired by the work of [Roeth and Tarantola 1994](https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/93JB01563) where the authors tried to perform [seismic inversion](https://wiki.seg.org/wiki/Inversion_of_seismic_data) from raw acoustic waveforms at various levels of noise. Here we provide a reference dataset of such waveforms. The machine learning task to be solved is a regression problem of predicting synthetic [p-Wave velocity](https://wiki.seg.org/wiki/Dictionary:P-wave) profiles from given acoustic waveforms. The data can be generated completly from scratch using [```torch```](pytorch.org) and libraries from the [```devito```](https://github.com/opesci/devito) project.
 
@@ -68,3 +78,31 @@ This will run three scripts:
 - ```generate_velocities.py```: creates the velocity models based on the paper by Roeth and Tarantola
 - ```generate_amplitudes.sh```: runs a docker container of [devito](https://github.com/opesci/devito) and runs the forward model on the created velocities
 - ```generate_noisy_test_set.py```: creates the noisy SNIST versions SNIST-1 and SNIST-2
+
+## Contributing
+
+If you would like to contribute or would like to raise an [issue](https://github.com/LukasMosser/SNIST/issues) please do so and join the discussion on the [slack-channel](https://softwareunderground.org/).
+
+## License
+
+MIT License
+
+Copyright (c) 2019 Lukas Mosser
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
