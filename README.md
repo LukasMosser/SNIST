@@ -42,14 +42,14 @@ The following is an example on how to use the provided dataset in ```torch```.
 All the data will automatically be downloaded - in this case - from the directory and is ready for training.  
 You can try it out on [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LukasMosser/SNIST/benchmarks/SNIST_Benchmark_Roeth_and_Tarantola.ipynb).  
 
-~~~~
+```python
 from utils.snist import SNIST
 
 snist_train = SNIST('./', train=True, download=True)
 snist_0_test = SNIST('./', train=False, download=True, noise=0)
 snist_1_test = SNIST('./', train=False, download=True, noise=1)
 snist_2_test = SNIST('./', train=False, download=True, noise=2)
-~~~~
+```
 
 ## Benchmarks and Results
 ---
