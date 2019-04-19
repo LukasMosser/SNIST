@@ -49,8 +49,8 @@ def plot_velocity_models(ax, models, colors=["blue", "black", "beige"], legend="
         ax.plot(range(len(curve)), curve, color=colors[0], alpha=0.01)
 
 def plot_losses(ax, losses):
-    ax.plot(losses[:, 0], color="black", label="Train")
-    ax.plot(losses[:, 1], color="red", label="Test")
+    ax.plot(losses[:, 0], color="black", label="Train Loss")
+    ax.plot(losses[:, 1], color="red", label="Validation Loss")
     ax.set_xlabel("Epochs")
     ax.set_ylabel("Average Loss - Average Velocity Error per Inversion [m/s]")
 
