@@ -15,7 +15,7 @@
 ### Benchmarks and Results
 |Model                            | SNIST-0 | SNIST-1 | SNIST-2 | Credit | Link 
 |---------------------------------|---------|---------|---------|--------|------
-|[1-Hidden Layer Benchmark](benchmarks/SNIST-Benchmark-Roeth-and-Tarantola.ipynb)     | 242.42 [m\s] | 287.98 [m\s] | 428.59 [m\s] | [@porestar](twitter.com/ |porestar)|[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LukasMosser/SNIST/benchmarks/SNIST_Benchmark_Roeth_and_Tarantola.ipynb)
+|[1-Hidden Layer Benchmark](benchmarks/SNIST-Benchmark-Roeth-and-Tarantola.ipynb)     | 242.42 [m\s] | 287.98 [m\s] | 428.59 [m\s] | [@porestar](twitter.com/porestar)|[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LukasMosser/SNIST/benchmarks/SNIST_Benchmark_Roeth_and_Tarantola.ipynb)
 
 ### Generating the data
 The data can be reproduced by running ```make build``` in the ```data_generation```
