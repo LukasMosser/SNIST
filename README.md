@@ -8,7 +8,7 @@
 | Training Amplitudes | 600             | 13 MB | [train_amplitudes.npy](https://raw.githubusercontent.com/LukasMosser/SNIST/master/data/train/train_amplitudes.npy) |
 | Training Velocities | 600             | 21 KB | [train_velocities.npy](https://raw.githubusercontent.com/LukasMosser/SNIST/master/data/train/train_velocities.npy)  |
 | Testing Amplitudes 0 (no noise - SNIST-0)  | 150             | 3 MB |[test_amplitudes.npy](https://raw.githubusercontent.com/LukasMosser/SNIST/master/data/test/test_amplitudes.npy)  |
-| Testing Amplitudes 1 (1 sigma noise - SNIST-1)  | 150             | 3MB |[test_amplitudes_noise_1.npy](https://raw.githubusercontent.com/LukasMosser/SNIST/master/data/test/test_amplitudes_noise_1.npy)  |
+| Testing Amplitudes 1 (1 sigma noise - SNIST-1)  | 150             | 3 MB |[test_amplitudes_noise_1.npy](https://raw.githubusercontent.com/LukasMosser/SNIST/master/data/test/test_amplitudes_noise_1.npy)  |
 | Testing Amplitudes 2 (2 sigma noise - SNIST-2)  | 150             | 3 MB |[test_amplitudes_noise_2.npy](https://raw.githubusercontent.com/LukasMosser/SNIST/master/data/test/test_amplitudes_noise_2.npy)  |
 | Testing Velocities  | 150            | 5 KB | [test_velocities.npy](https://raw.githubusercontent.com/LukasMosser/SNIST/master/data/test/test_velocities.npy) |
 
