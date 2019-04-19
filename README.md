@@ -1,5 +1,5 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
-[![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/LukasMosser/SNIST.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/LukasMosser/SNIST/context:python) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LukasMosser/SNIST/benchmarks/SNIST_Benchmark_Roeth_and_Tarantola.ipynb)
+[![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/LukasMosser/SNIST.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/LukasMosser/SNIST/context:python) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LukasMosser/SNIST/blob/master/benchmarks/SNIST_Benchmark_Roeth_and_Tarantola.ipynb)
 
 # Seismic-NIST
 <details><summary>Table of Contents</summary><p>
@@ -51,7 +51,7 @@ The data comes prepackaged as ```.npy``` files. Which you can either download ma
 
 The following is an example on how to use the provided dataset in ```torch```.
 All the data will automatically be downloaded - in this case - from the directory and is ready for training.  
-You can try it out on [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LukasMosser/SNIST/benchmarks/SNIST_Benchmark_Roeth_and_Tarantola.ipynb).  
+You can try it out on [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LukasMosser/SNIST/blob/master/benchmarks/SNIST_Benchmark_Roeth_and_Tarantola.ipynb).  
 
 ```python
 from utils.snist import SNIST
@@ -69,7 +69,7 @@ If you wish to contribute to this list please raise a [pull-request](https://git
 
 |Model                            | SNIST-0 | SNIST-1 | SNIST-2 | Credit | Link 
 |---------------------------------|---------|---------|---------|--------|------
-|[1-Hidden Layer Benchmark](benchmarks/SNIST-Benchmark-Roeth-and-Tarantola.ipynb)     | 242.42 [m\s] | 287.98 [m\s] | 428.59 [m\s] | [@porestar](twitter.com/porestar)|[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LukasMosser/SNIST/benchmarks/SNIST_Benchmark_Roeth_and_Tarantola.ipynb)
+|[1-Hidden Layer Benchmark](benchmarks/SNIST-Benchmark-Roeth-and-Tarantola.ipynb)     | 242.42 [m\s] | 287.98 [m\s] | 428.59 [m\s] | [@porestar](twitter.com/porestar)|[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LukasMosser/SNIST/blob/master/benchmarks/SNIST_Benchmark_Roeth_and_Tarantola.ipynb)
 
 ## Generating the data
 
