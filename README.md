@@ -14,8 +14,8 @@ The number corresponds to the level of noise added to the test set i.e. SNIST-0 
 Each waveform consists of 20 [traces]() according to 20 [offsets] sampled at 8 ms time intervals. [p-Wave velocities]() are capped at 4000 [m/s]. 
 Here's what the waveform amplitudes and some of the velocity profiles (ground truth - black) look like.
 
-![](figures/trainin_amplitudes.png)
-![](figures/test_velocities_grid.png)
+![](benchmarks/figures/trainin_amplitudes.png)
+![](benchmarks/figures/test_velocities_grid.png)
 
 ## Why Seismic-NIST was created
 ---
