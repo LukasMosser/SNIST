@@ -53,6 +53,9 @@ snist_2_test = SNIST('./', train=False, download=True, noise=2)
 
 ## Benchmarks and Results
 
+A reference implementation [is provided] and here we collect the performance of methods that have been evaluated on the SeismicNIST dataset.  
+If you wish to contribute to this list please raise a pull-request and provide a link to a repository where your results can be reproduced.    
+
 |Model                            | SNIST-0 | SNIST-1 | SNIST-2 | Credit | Link 
 |---------------------------------|---------|---------|---------|--------|------
 |[1-Hidden Layer Benchmark](benchmarks/SNIST-Benchmark-Roeth-and-Tarantola.ipynb)     | 242.42 [m\s] | 287.98 [m\s] | 428.59 [m\s] | [@porestar](twitter.com/porestar)|[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LukasMosser/SNIST/benchmarks/SNIST_Benchmark_Roeth_and_Tarantola.ipynb)
