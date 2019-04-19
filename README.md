@@ -1,6 +1,8 @@
-# Seismic-NIST
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
 [![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/LukasMosser/SNIST.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/LukasMosser/SNIST/context:python) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LukasMosser/SNIST/benchmarks/SNIST_Benchmark_Roeth_and_Tarantola.ipynb)
+
+# Seismic-NIST
+
 
 ```Seismic-NIST``` is a dataset of acoustic [seismic]() waveforms and their underlying velocity profiles. The dataset is inspired by the work of [Roeth and Tarantola 1994]() where the authors tried to perform [seismic inversion]() from raw acoustic waveforms at various levels of noise. Here we provide a reference dataset of such waveforms. The machine learning task to be solved is a regression problem of predicting synthetic [p-Wave velocity]()  profiles from given acoustic waveforms. The data can be generated completly from scratch using ```[torch]``` and libraries from the [```devito```]() project.
 
