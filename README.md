@@ -53,8 +53,8 @@ snist_2_test = SNIST('./', train=False, download=True, noise=2)
 
 ## Benchmarks and Results
 
-A reference implementation [is provided] and here we collect the performance of methods that have been evaluated on the SeismicNIST dataset.  
-If you wish to contribute to this list please raise a pull-request and provide a link to a repository where your results can be reproduced.    
+A reference implementation [is provided](benchmarks/SNIST_Benchmark_Roeth_and_Tarantola.ipynb) and here we collect the performance of methods that have been evaluated on the SeismicNIST dataset.  
+If you wish to contribute to this list please raise a [pull-request](https://github.com/LukasMosser/SNIST/pulls) and provide a link to a repository where your results can be reproduced.    
 
 |Model                            | SNIST-0 | SNIST-1 | SNIST-2 | Credit | Link 
 |---------------------------------|---------|---------|---------|--------|------
