@@ -47,7 +47,7 @@ The data comes prepackaged as ```.npy``` files. Which you can either download ma
 | Testing Amplitudes 2 (2 sigma noise - SNIST-2)  | 150             | 3 MB |[test_amplitudes_noise_2.npy](https://raw.githubusercontent.com/LukasMosser/SNIST/master/data/test/test_amplitudes_noise_2.npy)  |
 | Testing Velocities  | 150            | 5 KB | [test_velocities.npy](https://raw.githubusercontent.com/LukasMosser/SNIST/master/data/test/test_velocities.npy) |
 
-### Pytorch Datasets
+## Pytorch Datasets
 
 The following is an example on how to use the provided dataset in ```torch```.
 All the data will automatically be downloaded - in this case - from the directory and is ready for training.  
