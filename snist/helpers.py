@@ -3,12 +3,14 @@ import matplotlib.pyplot as plt
 import torch
 import random
 
+
 def transform(y, nz):
     model_true = torch.ones(nz, 1)    
     for i, v in enumerate(y):
         model_true[40*i:40*(i+1), :] = v.item()
         
     return model_true
+
 
 def plot_amplitudes_grid(amplitudes, nt, nrec):
     fig, axarr = plt.subplots(5, 5, figsize=(12, 12))
@@ -18,6 +20,7 @@ def plot_amplitudes_grid(amplitudes, nt, nrec):
         ax.get_xaxis().set_ticks([])
         ax.get_yaxis().set_ticks([])
     return axarr, fig
+
 
 def plot_velocity_profiles_grid(y, y_, nz):
     fig, axarr = plt.subplots(5, 5, figsize=(12, 12))
@@ -29,6 +32,7 @@ def plot_velocity_profiles_grid(y, y_, nz):
         ax.get_yaxis().set_ticks([])
     return axarr, fig
 
+
 def plot_velocity_profile_grid(y, nz):
     fig, axarr = plt.subplots(5, 5, figsize=(12, 12))
     for ax, y in zip(axarr.flatten(), y.cpu().numpy()):   
@@ -37,6 +41,7 @@ def plot_velocity_profile_grid(y, nz):
         ax.get_xaxis().set_ticks([])
         ax.get_yaxis().set_ticks([])
     return axarr
+
 
 def plot_velocity_models(ax, models, colors=["blue", "black", "beige"], legend="Data", alpha=0.5):
     dev = models[:, :, 0].std(0).numpy()
@@ -47,6 +52,7 @@ def plot_velocity_models(ax, models, colors=["blue", "black", "beige"], legend="
     sc2 = ax.fill_between(range(mean.shape[0]), mean-dev, mean+dev, alpha=alpha, color=colors[2])
     for curve in models[:, :, 0].numpy():
         ax.plot(range(len(curve)), curve, color=colors[0], alpha=0.01)
+
 
 def plot_losses(ax, losses):
     ax.plot(losses[:, 0], color="black", label="Train Loss")
@@ -68,6 +74,7 @@ def store_model_checkpoint(path, epoch, model, optimizer, loss):
             }, path)
     return True
 
+
 def load_model_checkpoint(path, model, optimizer):
     checkpoint = torch.load(path)
     model.load_state_dict(checkpoint['model_state_dict'])
@@ -75,6 +82,7 @@ def load_model_checkpoint(path, model, optimizer):
     epoch = checkpoint['epoch']
     loss = checkpoint['loss']
     return model, optimizer, epoch, loss
+
 
 def plot_wiggle_traces(fig, xample, n_recorders):
     for i in range(1, n_recorders):
@@ -86,6 +94,7 @@ def plot_wiggle_traces(fig, xample, n_recorders):
             ax.axes.get_yaxis().set_visible(False)
             ax.set_frame_on(False)
             ax.set_xlabel("Time [10 ms]", fontsize=16)
+
 
 def set_seed(seed):
     random.seed(seed)
