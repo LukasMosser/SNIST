@@ -1,5 +1,5 @@
 import setuptools
 
 setuptools.setup(name='snist',
-                 packages=setuptools.find_packages(),
+                 packages=['snist'],
                  author='Dr. Lukas Mosser')
