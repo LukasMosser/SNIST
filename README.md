@@ -11,6 +11,7 @@
 * [Benchmarks and Results](#benchmarks-and-results)
 * [Generating the data](#generating-the-data)
 * [Contributing](#contributing)
+* [Citation](#citation)
 * [License](#license)
 </p></details><p></p>
 
