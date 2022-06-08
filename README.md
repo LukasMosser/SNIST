@@ -1,5 +1,6 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
 [![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/LukasMosser/SNIST.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/LukasMosser/SNIST/context:python) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LukasMosser/SNIST/blob/master/benchmarks/SNIST_Benchmark_Roeth_and_Tarantola.ipynb)
+[![DOI](https://zenodo.org/badge/179105980.svg)](https://zenodo.org/badge/latestdoi/179105980)
 
 # Seismic-NIST
 <details><summary>Table of Contents</summary><p>
@@ -83,6 +84,23 @@ This will run three scripts:
 ## Contributing
 
 If you would like to contribute or would like to raise an [issue](https://github.com/LukasMosser/SNIST/issues) please do so and join the discussion on the [slack-channel](https://softwareunderground.org/).
+
+## Citation
+
+If you use SNIST in your work we would appreciate if you could cite the dataset throught the DOI
+
+```
+@software{lukas_mosser_2022_6622823,
+  author       = {Lukas Mosser},
+  title        = {{SNIST: A Benchmark for Seismic Velocity Inversion 
+                   from Synthetics}},
+  month        = jun,
+  year         = 2022,
+  publisher    = {Zenodo},
+  version      = {v1.0},
+  doi          = {10.5281/zenodo.6622823},
+  url          = {https://doi.org/10.5281/zenodo.6622823}
+}```
 
 ## License
 
