@@ -100,10 +100,12 @@ If you use SNIST in your work we would appreciate if you could cite the dataset 
   version      = {v1.0},
   doi          = {10.5281/zenodo.6622823},
   url          = {https://doi.org/10.5281/zenodo.6622823}
-}```
+}
+```
 
 ## License
 
+```
 MIT License
 
 Copyright (c) 2019 Lukas Mosser
@@ -125,3 +127,4 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+```
